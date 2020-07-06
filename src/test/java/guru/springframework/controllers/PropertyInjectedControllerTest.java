@@ -1,6 +1,7 @@
 package guru.springframework.controllers;
 
 import guru.springframework.services.GreetingServiceImpl;
+import guru.springframework.services.PrimaryGreetingService;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,7 +17,7 @@ public class PropertyInjectedControllerTest {
     @Before
     public void setUp() throws Exception {
         this.propertyInjectedController = new PropertyInjectedController();
-        this.propertyInjectedController.greetingServiceImpl = new GreetingServiceImpl();
+        this.propertyInjectedController.greetingService = new PrimaryGreetingService();
     }
 
     @Test
